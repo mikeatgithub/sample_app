@@ -9,5 +9,8 @@ group :development do
 end
  
 group :test do
+  # Added to solve error: have_selector / has_selector?
+  gem 'webrat'
+
   gem 'rspec'
 end 
