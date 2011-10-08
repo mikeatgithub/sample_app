@@ -135,3 +135,13 @@ td.sidebar {
 	border: 1px solid #999;
 	margin-bottom:  -15px;
 }
+
+/* Lineup labels and text fields */
+
+label{
+  width: 7em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block
+}
