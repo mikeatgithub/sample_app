@@ -14,6 +14,8 @@ class SessionsController < ApplicationController
       render 'new'
     else
       # Handle success
+      sign_in user
+       redirect_to user  # Can be done this way too: redirect_to user_path(user)
     end
   end
   

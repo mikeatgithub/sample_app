@@ -33,8 +33,16 @@ class User < ActiveRecord::Base
   class << self
     def authenticate(email, submitted_password)
       user = find_by_email(email)
-      return nil if user.nil?
-      return user if user.has_password?(submitted_password)
+      
+      # return nil if user.nil?
+      # return user if user.has_password?(submitted_password)
+      #above 2 commented lines dothe same thing as the one line below
+      (user && user.has_password?(submitted_password)) ? user : nil      
+    end
+    
+    def authenticate_with_salt(id, cookie_salt)
+      user = find_by_id(id)
+      (user && user.salt == cookie_salt) ? user : nil
     end
   end
   
@@ -58,6 +66,7 @@ class User < ActiveRecord::Base
   end
 end
 
+
 # == Schema Information
 #
 # Table name: users
@@ -68,5 +77,6 @@ end
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
