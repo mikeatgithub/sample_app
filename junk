@@ -1,0 +1,213 @@
+......................F.......................................................................
+
+Failures:
+
+  1) UsersController GET 'index' for signed-in users should have delete links for admins
+     Failure/Error: response.should have_selector('a', :href => user_path(other_user),
+       expected following output to contain a <a href='/users/2014'>delete</a> tag:
+       <!DOCTYPE html>
+       <html>
+       <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+       <title>Ruby on Rails Tutorial Sample App | All users</title>
+       <!--[if lt IE 9]>
+       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+       <![endif]--><link href="/stylesheets/blueprint/screen.css?1307408692" media="screen" rel="stylesheet" type="text/css">
+       <link href="/stylesheets/blueprint/print.css?1307408692" media="print" rel="stylesheet" type="text/css">
+       <!--[if lt IE 8]><link href="/stylesheets/blueprint/ie.css?1307408692" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="/stylesheets/custom.css?1318390278" media="screen" rel="stylesheet" type="text/css">
+       </head>
+       <body>
+           <div class="container">
+           <header><a href="/"><img alt="Sample App" class="round" src="/images/logo.png?1317542342"></a>
+         <nav class="round"><ul>
+       <li><a href="/">Home</a></li>
+             <li><a href="/users/2013">Profile</a></li> <!-- or you can have ===> user_path(current_user) -->
+             <li><a href="/users">Users</a></li> <!-- or you can have ===> user_path(current_user) -->
+             <li><a href="/users/2013/edit">Settings</a></li>
+             <li><a href="/help">Help</a></li>
+             <li><a href="/signout">Sign out</a></li>
+           </ul></nav></header><section class="round"><h1>All users</h1>
+       
+       <div class="pagination">
+       <span class="previous_page disabled">&#8592; Previous</span> <em class="current">1</em> <a rel="next" href="/users?page=2">2</a> <a class="next_page" rel="next" href="/users?page=2">Next &#8594;</a>
+       </div>
+       
+       <ul class="users">
+       
+         # The following 3 blocks do the same thing.
+         # They do it with less code progressively
+       
+       
+       
+           <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/1fda4469bcbec3badf5418269ffc5968?size=30"><a href="/users/2013">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/86a7c65390f83bdee8c4455af823b7cb?size=30"><a href="/users/2014">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/dd5bff939e78bbc5051efa1a3ff1dcb0?size=30"><a href="/users/2015">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/a51c2444aa7243cdba0c7704fefcfb7c?size=30"><a href="/users/2016">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/dce4444d675fa4cb1ff7bf989e1f0728?size=30"><a href="/users/2017">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/ff4d7b3d7f44a4c1984d2f09089e2d89?size=30"><a href="/users/2018">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/88befd53f9b04e7c9ece6595ce4b7ebc?size=30"><a href="/users/2019">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/3bd5cf8ced6839b4e486c4798aa4f2c3?size=30"><a href="/users/2020">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/42632c306a2a6190997b93ccfe75c6e0?size=30"><a href="/users/2021">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/abd9c7fbf0e818c22d1120c570075c73?size=30"><a href="/users/2022">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/f687e64cc0adf962952754c38c5cbd2b?size=30"><a href="/users/2023">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/cd96d3f9d337c29cdbc4123af556c709?size=30"><a href="/users/2024">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/16fc5231cd09e087460dff775c2f1320?size=30"><a href="/users/2025">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/b629eb1753b647e6e75cce56727b2bb8?size=30"><a href="/users/2026">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/8afeaeec8ef530a041c90a8f4c56c532?size=30"><a href="/users/2027">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/936b2c92039c6b2af2a061e48d448cfe?size=30"><a href="/users/2028">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/61664143e77044aac8688944df4d18c4?size=30"><a href="/users/2029">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/45de39227a48b589a50d7781b7526fd3?size=30"><a href="/users/2030">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/509b8ba7e0441be749d62697f64d2048?size=30"><a href="/users/2031">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/fba166cab592214c695916ba37f6c924?size=30"><a href="/users/2032">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/3b42803f4d898883d9f59137286f98ba?size=30"><a href="/users/2033">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/e9d921e3800ccfae496772b346c725c8?size=30"><a href="/users/2034">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/a494809422ed3487565343d69173ba78?size=30"><a href="/users/2035">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/6a04b73a204828a1ebc7a625545d85ae?size=30"><a href="/users/2036">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/93e247cf4e7794201542d9f134a6bc89?size=30"><a href="/users/2037">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/80d1bfa1daf9b4da14c14502fd283c9d?size=30"><a href="/users/2038">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/76a9643d4a11809e63a01cbcac6271f9?size=30"><a href="/users/2039">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/781bc1a7020541127ff5a1f692a8a37f?size=30"><a href="/users/2040">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/4dc2bc1d2b80e3ff0e348af2460baf2c?size=30"><a href="/users/2041">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       <li>
+         <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/e4145b6f7aaec872ddb20014ea51ee59?size=30"><a href="/users/2042">Michael Hartl</a>
+         |
+         <a href="/users?confirm=Are+you+sure%3F&amp;method=delete&amp;title=Delete+Michael+Hartl">delete</a>
+       </li>
+       
+       </ul>
+       <div class="pagination">
+       <span class="previous_page disabled">&#8592; Previous</span> <em class="current">1</em> <a rel="next" href="/users?page=2">2</a> <a class="next_page" rel="next" href="/users?page=2">Next &#8594;</a>
+       </div>
+             </section><footer><nav class="round"><ul>
+       <li><a href="/about">About</a></li>
+             <li><a href="/contact">Contact</a></li>
+             <li><a href="http://news.railstutorial.org/">News</a></li>
+             <li><a href="http://railstutorial.org/">Rails Tutorial</a></li>
+           </ul></nav></footer>
+       </div>
+       	</body>
+       </html>
+     # ./spec/controllers/users_controller_spec.rb:58:in `block (4 levels) in <top (required)>'
+
+Finished in 8.8 seconds
+94 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:54 # UsersController GET 'index' for signed-in users should have delete links for admins

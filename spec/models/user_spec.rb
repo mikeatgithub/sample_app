@@ -160,7 +160,31 @@ describe User do
       end
     end
   end
+  
+  describe "Admin attribute" do
+  
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+    
+     it "should respond to admin; i.e. user should have admin attribute.  " do
+      @user.should respond_to(:admin)
+     end
+     
+     it "should not be admin by default" do
+      # The following two lines are identica
+      #@user.admin?.should_not be_true 
+      @user.should_not be_admin
+     end
+     
+     it "should be convertible to admin" do
+      @user.toggle!(:admin)
+      @user.should be_admin
+     end
+     
+  end
 end
+
 
 
 # == Schema Information
@@ -174,5 +198,6 @@ end
 #  updated_at         :datetime
 #  encrypted_password :string(255)
 #  salt               :string(255)
+#  admin              :boolean(1)      default(FALSE)
 #
 
