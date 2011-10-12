@@ -19,16 +19,33 @@ module SessionsHelper
 
   def sign_out
     cookies.delete(:remember_token)
-    self.current_user = nil
+    self.current_user = nil             # we could use just current_user and leave out "self."
+  end
+
+  def current_user?(user)
+    user ==  self.current_user      # we could use just current_user and leave out "self."
   end
 
   def deny_access
+    store_location
     redirect_to signin_path,  :notice => "Please sign in to access this page."
-  
     # The above line is equivalent to the following two lines.
 
     # flash[:notice] = "Please sign in to access this page."
     # redirect_to signin_path
+  end
+ 
+  def store_location
+    session[:return_to_page] = request.fullpath  
+  end
+  
+  def redirect_back_or_redirect_to(default_value)
+    redirect_to(session[:return_to_page] || default_value)
+    clear_return_to_page
+  end
+  
+  def clear_return_to_page
+    session[:return_to_page] = nil
   end
   
   private
