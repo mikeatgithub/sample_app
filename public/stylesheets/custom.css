@@ -198,7 +198,7 @@ ul.users li {
 
 /* Micropost styling */
 
-h1.microposts {
+h1.micropost {
 	margin-bottom: 0.3em;
 }
 
@@ -217,7 +217,7 @@ table.microposts tr td.gravatar {
 }
 
 table.microposts tr td.micropost {
-	border-top:1px solid #ccc;
+	border-top: 1px solid #ccc;
 	vertical-align: top;
 	padding-top: 10px; 
 }
