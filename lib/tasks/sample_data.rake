@@ -1,8 +1,11 @@
-require 'faker'
+# Moved  the following line to where it is after "task :populate => :environment do"
+# to sovle "heroku rake db:migrate" issue.
+#require 'faker'
 
 namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do
+    require 'faker'
     Rake::Task['db:reset'].invoke
     adnin = User.create!(:name => "Example User",
                                     :email => "example@railstutorial.org",
